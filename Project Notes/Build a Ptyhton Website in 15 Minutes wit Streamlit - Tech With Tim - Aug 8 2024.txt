@@ -1,0 +1,335 @@
+Build a Ptyhton Website in 15 Minutes wit Streamlit - Tech With Tim - Aug 8 2024
+https://www.youtube.com/watch?v=2siBrMsqF44
+
+In this video, I'm giving you an introduction to a fantastic module known as Streamlit and how it can be used to build a Python website in just 15 minutes. Over my ten years of working with Python, this is one of the best modules that I've used, and it's definitely the easiest and fastest way to build interactive user interfaces in Python, work with data based applications, and pretty much anything.
+
+--------------------------------
+App name: city_weather_data
+
+Create my public github repo
+https://github.com/Rascas-05/city_weather_data.git
+
+README:
+city_weather_data
+Streamlit city weather data analysis - copy of Build a Python Website in 15 Minutes With Streamlit - Tech With https://www.youtube.com/watch?v=2siBrMsqF44Tim -
+
+
+VSCode -> Clone Git Repository
+Select Git Repository -> "https://github.com/Rascas-05/city_weather_data.git"
+
+Navigate to folder where you want to save your github repo. 
+C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim
+
+PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data>
+----VSCode---
+In VSCode Explorer you should now see folder "CITY_WEATHER_DATA" and the README.MD file
+
+File->Save Workspace As.. "city_weather_data" (default repo name)
+
+
+Ctrl+Shift+S
+Select Python Create Environment
+Select Venv
+Select your Python Interpreter. Wait for this process to complete.
+---VSCode Terminal---
+PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data>
+PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> cd .venv\scripts
+PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data\.venv\scripts> .\activate
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data\.venv\scripts> cd..
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data\.venv> cd..
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> 
+---------------------
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> pip list
+Package Version
+------- -------
+pip     24.3.1 
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data>python --version
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> python --version
+Python 3.12.6
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> 
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> pip install streamlit
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> pip list
+Package                   Version
+------------------------- -----------
+altair                    5.5.0
+attrs                     24.3.0
+blinker                   1.9.0
+cachetools                5.5.0
+certifi                   2024.12.14
+charset-normalizer        3.4.0
+click                     8.1.7
+colorama                  0.4.6
+gitdb                     4.0.11
+GitPython                 3.1.43
+idna                      3.10
+Jinja2                    3.1.4
+jsonschema                4.23.0
+jsonschema-specifications 2024.10.1
+markdown-it-py            3.0.0
+MarkupSafe                3.0.2
+mdurl                     0.1.2
+narwhals                  1.18.4
+numpy                     2.2.0
+packaging                 24.2
+pandas                    2.2.3
+pillow                    11.0.0
+pip                       24.3.1
+protobuf                  5.29.1
+pyarrow                   18.1.0
+pydeck                    0.9.1
+Pygments                  2.18.0
+python-dateutil           2.9.0.post0
+pytz                      2024.2
+referencing               0.35.1
+requests                  2.32.3
+rich                      13.9.4
+rpds-py                   0.22.3
+six                       1.17.0
+smmap                     5.0.1
+streamlit                 1.41.1
+tenacity                  9.0.0
+toml                      0.10.2
+tornado                   6.4.2
+typing_extensions         4.12.2
+tzdata                    2024.2
+urllib3                   2.2.3
+watchdog                  6.0.0
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> 
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> pip install panda
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> pip install matplotlib
+Successfully installed contourpy-1.3.1 cycler-0.12.1 fonttools-4.55.3 kiwisolver-1.4.7 matplotlib-3.10.0 pyparsing-3.2.0
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> pip list
+Package                   Version
+------------------------- -----------
+altair                    5.5.0
+attrs                     24.3.0
+blinker                   1.9.0
+cachetools                5.5.0
+certifi                   2024.12.14
+charset-normalizer        3.4.0
+click                     8.1.7
+colorama                  0.4.6
+contourpy                 1.3.1
+cycler                    0.12.1
+fonttools                 4.55.3
+gitdb                     4.0.11
+GitPython                 3.1.43
+idna                      3.10
+Jinja2                    3.1.4
+jsonschema                4.23.0
+jsonschema-specifications 2024.10.1
+kiwisolver                1.4.7
+markdown-it-py            3.0.0
+MarkupSafe                3.0.2
+matplotlib                3.10.0
+mdurl                     0.1.2
+narwhals                  1.18.4
+numpy                     2.2.0
+packaging                 24.2
+pandas                    2.2.3
+pillow                    11.0.0
+pip                       24.3.1
+protobuf                  5.29.1
+pyarrow                   18.1.0
+pydeck                    0.9.1
+Pygments                  2.18.0
+pyparsing                 3.2.0
+python-dateutil           2.9.0.post0
+pytz                      2024.2
+referencing               0.35.1
+requests                  2.32.3
+rich                      13.9.4
+rpds-py                   0.22.3
+six                       1.17.0
+smmap                     5.0.1
+streamlit                 1.41.1
+tenacity                  9.0.0
+toml                      0.10.2
+tornado                   6.4.2
+typing_extensions         4.12.2
+tzdata                    2024.2
+urllib3                   2.2.3
+watchdog                  6.0.0
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> 
+-------------
+Create new file requirements.txt
+---requirements.txt---
+streamlit
+pandas
+matplotlib
+--------------
+Create new file .gitignore
+----.gitignore---
+.venv
+-----------------
+test streamlit is working okay
+---Terminal---
+
+Winsows Explorer web browser opens - > http://localhost:8501/ "Welcome to Streamlit!"
+
+Optional step -> Create a new folder "Project Notes"
+---------------
+
+(.venv) PS C:\Users\bfvdi\Documents\AppDevelopment\VSCODE\Projects\Streamlit\Tech_with_Tim\city_weather_data> 
+streamlit hello
+
+ Local URL: http://localhost:8501
+  Network URL: http://192.168.0.3:8501
+
+  Ready to create your own Python apps super quickly?
+  Head over to https://docs.streamlit.io
+
+  May you create awesome apps!
+------------
+Note type Ctrl+C in the Terminal windows to stop streamlit program.
+
+Note you can click "Go Live" message link in bottom status line of VSCode app to launch a web browser.
+-------------
+Create a new file "main.py"
+----main.py---
+import streamlit as st
+
+st.write("Hello from Streamlet!!")
+----main.py----
+import streamlit as st
+
+st.write("<h1>Hello from Streamlet!!</h1>")
+--------
+Note that neither of the following statements produced larger text size.
+st.write("<h1>Hello from Streamlet!!</h1>")
+st.write(f"<h1>Hello from Streamlet!!</h1>")
+----main.py----
+import streamlit as st
+
+st.write("Hello from Streamlet!!")
+st.write([{"key": "value"}])
+<h1>Hello from Streamlet!!</h1>
+[
+  0:{
+        "key":"value"
+    }
+]
+----main.py----
+import streamlit as st
+import pandas as pd
+import matplotlib as mp
+
+st.title("Simple Data Dashboard")
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+if uploaded_file is not None:
+	st.write("File uploaded...")
+----------------
+Download data file for Web app
+https://raw.githubusercontent.com/techwithtim/Streamlit-Intro-App/refs/heads/main/Sample_Data_for_Plotting_and_Filtering.csv
+Copy the data in the web page Ctrl+A then Ctrl+C
+open Notepad++ don't use Notepad otherwise it will save the data as a .txt file type
+Paste the csv data into Notepad++
+Notepad++ ->Save As "Sample_Data_for_Plotting_and_Filtering.csv"
+Notepad++ by default will save the file type if specified in the filename.
+-----------------
+----main.py----
+import streamlit as st
+import pandas as pd
+import matplotlib as mp
+
+st.title("Simple Data Dashboard")
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+if uploaded_file is not None:
+	st.write("File uploaded...")
+	df = pd.read_csv(uploaded_file)
+
+	st.subheader("Data Preview")
+	st.write(df.head())
+---------------------------
+Data frame preview displays 
+----main.py----
+import streamlit as st
+import pandas as pd
+import matplotlib as mp
+
+st.title("Simple Data Dashboard")
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+if uploaded_file is not None:
+	st.write("File uploaded...")
+	df = pd.read_csv(uploaded_file)
+
+	st.subheader("Data Preview")
+	st.write(df.head())
+
+	st.subheader("Data Summary")
+	st.write(df.describe())
+---------------------------------------
+Data frame Summary displays 
+----main.py----
+import streamlit as st
+import pandas as pd
+import matplotlib as mp
+
+st.title("Simple Data Dashboard")
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+if uploaded_file is not None:
+	st.write("File uploaded...")
+	df = pd.read_csv(uploaded_file)
+
+	st.subheader("Data Preview")
+	st.write(df.head())
+
+	st.subheader("Data Summary")
+	st.write(df.describe())
+	
+	st.subheader("Filter Data")
+	columns = df.columns.tolist()
+	selected_column = st.selectbox("Select column to filter by", columns)
+	unique_values = df[selected_column].unique()
+	selected_value = st.selectedbox("select value", unique_values)
+
+	filtered_df = df[df[selected_column] == selected_value]
+	st.write(filtered.df)
+
+
+-----------------------------------------
+----main.py----
+import streamlit as st
+import pandas as pd
+import matplotlib as mp
+
+st.title("Simple Data Dashboard")
+
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+
+if uploaded_file is not None:
+	st.write("File uploaded...")
+	df = pd.read_csv(uploaded_file)
+
+	st.subheader("Data Preview")
+	st.write(df.head())
+
+	st.subheader("Data Summary")
+	st.write(df.describe())
+	
+	st.subheader("Filter Data")
+	columns = df.columns.tolist()
+	selected_column = st.selectbox("Select column to filter by", columns)
+	unique_values = df[selected_column].unique()
+	selected_value = st.selectedbox("select value", unique_values)
+
+	filtered_df = df[df[selected_column] == selected_value]
+	st.write(filtered.df)
+
+	st.subheader("Plot Data")
+	x_column = st.selectbox("Select x-axis column", columns)
+	y_column = st.selectbox("Select y-axis column", columns)
+
+
+-----------------------------------------
+
+
+ 
